@@ -3,13 +3,15 @@
  */
 package com.gembro.model;
 
-import java.util.Date;
+import java.util.Date;	
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -33,9 +35,11 @@ public class Proprietaire {
 	@Id
 	@GeneratedValue(generator="increment")
 	@GenericGenerator(name="increment", strategy="increment")
-	private Long id;
-	private String nom;
-	private String prenom;
+	@Column(name="id")	private Long id;
+	
+	@Column(name="nom")	private String nom;
+	
+	@Column(name="prenom")	private String prenom;
 	
 	/** No-arg constructor (takes no arguments). */
 	public Proprietaire() {}
@@ -57,7 +61,6 @@ public class Proprietaire {
 	/**
 	 * @return the nom
 	 */
-	@Column(name="nom")
 	public String getNom() {
 		return nom;
 	}
@@ -72,7 +75,6 @@ public class Proprietaire {
 	/**
 	 * @return the prenom
 	 */
-	@Column(name="prenom")
 	public String getPrenom() {
 		return prenom;
 	}

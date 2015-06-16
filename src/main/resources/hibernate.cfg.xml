@@ -22,6 +22,10 @@
       gc
    </property>
 
+   <property name="hibernate.jdbc.batch_size">
+      50
+   </property>
+   
    <!-- List of XML mapping files 
    <mapping resource="Proprietaire.hbm.xml"/>-->
 

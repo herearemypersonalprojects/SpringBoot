@@ -1,5 +1,5 @@
 /**
- * 
+ * This package contains all JavaBeans for the project
  */
 /**
  * @author quocanh
