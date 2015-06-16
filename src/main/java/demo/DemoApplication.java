@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class DemoApplication {
 
+	
     public static void main(String[] args) {
        // SpringApplication.run(DemoApplication.class, args);
         
@@ -20,6 +21,9 @@ public class DemoApplication {
         Arrays.sort(beanNames);
         for (String beanName : beanNames) {
             System.out.println(beanName);
-        }        
-    }
+        }       
+
+    }    
+    
+
 }

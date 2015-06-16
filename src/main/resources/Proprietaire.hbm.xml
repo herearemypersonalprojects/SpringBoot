@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.gembro.model">
+	<class name="Proprietaire" table="LOC_PROPRIETAIRE">
+      <meta attribute="class-description">
+         This class contains the proprietaire detail. 
+      </meta>	
+		<id name="id" type="int" column="ID">
+			<generator class="native"/>
+		</id>
+		<property name="nom" type="string" column="NOM" />
+		<property name="prenom" />
+	</class>
+</hibernate-mapping>
+

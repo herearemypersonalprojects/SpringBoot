@@ -35,7 +35,28 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>		        
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        
+
+		<!-- HIBERNATE -->
+		<dependency>
+		   <groupId>org.hibernate</groupId>
+		   <artifactId>hibernate-core</artifactId>
+		   <version>4.3.10.Final</version>
+		</dependency>
+		
+		<!-- MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.35</version>
+		</dependency>
+        
     </dependencies>
 
     <properties>
