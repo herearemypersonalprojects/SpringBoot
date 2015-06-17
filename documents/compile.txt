@@ -1,0 +1,17 @@
+A. Setup environment
+1. Java: 
+nano ~/.bash_profile
+export JAVA_HOME=/home/quocanh/appli/java/jdk1.8.0_25
+
+export PATH=$PATH:/home/quocanh/appli/java/jdk1.8.0_
+
+source ~/.bash_profile
+
+2. Compile
+mvn package
+$JAVA_HOME/bin/java -jar target/gembro-0.1.0-SNAPSHOT.jar
+or
+mvn spring-boot:run
+
+3. Initialization
+$ mvn dependency:tree

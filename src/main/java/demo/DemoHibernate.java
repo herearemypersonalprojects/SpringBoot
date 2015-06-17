@@ -27,7 +27,7 @@ public class DemoHibernate {
 	 * @param args
 	 */
 	
-	public static void main(String[] args) {
+	public static void runHibernateDemo() {
         // A SessionFactory is set up once for an application
         SessionFactory sessionFactory = createSessionFactory();
         Session session = sessionFactory.openSession();
