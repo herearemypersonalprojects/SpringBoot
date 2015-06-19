@@ -13,7 +13,6 @@ public class DemoApplication {
 
 	
     public static void main(String[] args) {
-       // SpringApplication.run(DemoApplication.class, args);
         
         ApplicationContext ctx = SpringApplication.run(DemoApplication.class, args); // We need to pass DemoApplication.class as an argument to the run method to tell SpringApplication which is the primary Spring component.
 
@@ -23,7 +22,9 @@ public class DemoApplication {
         Arrays.sort(beanNames);
         for (String beanName : beanNames) {
             System.out.println(beanName);
-        }       
+        }
+        
+        DemoHibernate.runHibernateDemo();
 
     }    
     

@@ -42,8 +42,10 @@ public class Proprietaire {
 	@Column(name="prenom")	private String prenom;
 	
 	/** No-arg constructor (takes no arguments). */
-	public Proprietaire() {}
-
+	protected Proprietaire() {
+		// no-args constructor required by JPA spec
+		// this one is protected since it shouldn't be used directly		
+	}
 	/**
 	 * @return the id
 	 */

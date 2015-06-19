@@ -6,6 +6,7 @@ package com.gembro.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -20,15 +21,27 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name="LOC_BIEN")
 public class Bien {
-	@Id @GeneratedValue(generator="increment")	@GenericGenerator(name="increment", strategy="increment") 
-	@Column(name="id") int id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@Column(name = "id", nullable = false, updatable = false) 
+	private int id;
 	
-	@ManyToOne	@JoinColumn(name="id_proprietaire") Proprietaire proprietaire;
+	@ManyToOne	@JoinColumn(name="id_proprietaire") 
+	private Proprietaire proprietaire;
 	
 	//@Column(name="id_proprietaire")	int id_proprietaire;
-	@Column(name="adresse") String adresse;
-	@Column(name="cp") int cp;
-	@Column(name="ville") String ville;
+	@Column(name="adresse") 
+	private String adresse;
+	
+	@Column(name="cp") 
+	private int cp;
+	
+	@Column(name="ville") 
+	private String ville;
+	
+	
+	
+	protected Bien() {}
+	
 	/**
 	 * @return the id
 	 */
